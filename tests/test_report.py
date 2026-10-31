@@ -8,7 +8,7 @@ import tempfile
 import unittest
 
 from analysis.build_report import (FILES, distribution, latest_successful,
-    summarize, validate_sources, verified_run)
+    review_candidates, summarize, validate_sources, verified_run)
 from healthcare_pipeline.sources import SOURCES, ContractError
 
 
@@ -76,7 +76,41 @@ class ReportTests(unittest.TestCase):
         self.assertEqual(summary['mode'], 'summary_only')
         self.assertEqual(grouped, {})
         self.assertIsNone(summary['example'])
+        self.assertIsNone(summary['review_candidates'])
         self.assertTrue(all('distribution' not in m for m in summary['metrics']))
+
+    def candidate(self, facility, gap, **changes):
+        row = {'facility_id': facility, 'facility_name': 'Hospital '+facility, 'state': 'AL',
+               'measure_id': 'OP_18b', 'score_value': str(100+gap), 'peer_median': '100',
+               'gap_to_peer_median': str(gap), 'peer_count': '10', 'peer_q3': '105',
+               'start_date': '2024-10-01', 'end_date': '2025-09-30',
+               'comparison_eligible': 'true', 'comparison_status': 'comparable',
+               'unfavorable_signal': 'true'}
+        return {**row, **changes}
+
+    def test_shortlist_largest_stored_gaps_limit_and_stable_ties(self):
+        rows = [self.candidate(f'{i:06d}', gap) for i, gap in enumerate([50, 100, 100, 80, 70, 60, 40], 1)]
+        result = review_candidates(list(reversed(rows)))
+        self.assertEqual(result['flagged_pool_count'], 7)
+        self.assertEqual([r['facility_id'] for r in result['hospitals']],
+                         ['000002', '000003', '000004', '000005', '000006'])
+
+    def test_shortlist_uses_one_measure_and_qualified_existing_flags(self):
+        rows = [self.candidate('000001', 20),
+                self.candidate('000002', 999, comparison_eligible='false'),
+                self.candidate('000003', 999, comparison_status='insufficient_peers'),
+                self.candidate('000004', 999, unfavorable_signal='false'),
+                self.candidate('000005', 999, peer_count='9'),
+                self.candidate('000006', 999, measure_id='OP_22'),
+                self.candidate('000007', -20)]
+        self.assertEqual([r['facility_id'] for r in review_candidates(rows)['hospitals']], ['000001'])
+
+    def test_shortlist_copies_source_values_and_identifiers(self):
+        original = self.candidate('050327', 228, score_value='413.000000',
+                                  peer_median='185.0', gap_to_peer_median='228.0', peer_count='195')
+        result = review_candidates([original])['hospitals'][0]
+        for name, value in result.items():
+            self.assertEqual(value, original[name])
 
 
 if __name__ == '__main__':

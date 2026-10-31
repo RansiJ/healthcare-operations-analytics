@@ -3,6 +3,7 @@
   "source_run": "20261031T100805Z_d4fac535",
   "pipeline_reexecuted": false,
   "original_spark_suite_reexecuted": false,
+  "report_tests_passed": 11,
   "independent_descriptive_quartile_checks": 9,
   "report_rebuild_artifact_sha256_equal": true,
   "reproducible_artifacts": [
@@ -16,11 +17,33 @@
   ],
   "summary_only_build_executed": true,
   "summary_only_no_invented_distributions_or_hospital_values": true,
+  "previous_statistics_and_example_unchanged": true,
+  "four_visualization_sha256_unchanged": {
+    "coverage.png": "cda8b6f94282d609f17bacc81e620fd77ed8335ee645954893fd3b1ecef3f671",
+    "distributions.png": "2332b7b252f8a23b14ec4c97b091978308afdc27172865f9ed8ad467e059eb6c",
+    "hospital_example.png": "18bd6df4fba7b7e9db794c1a3fe0a81c7d1639feb7b7335d525c2b9c5c99c177",
+    "peer_gaps.png": "5978d9212978a30aba0a832e6ba48a016832c02e76ab357e6f3a172318df3840"
+  },
+  "candidate_source_rows_verified": 5,
+  "candidate_pool_verified": 659,
+  "candidate_selection_independently_verified": true,
+  "original_pipeline_sql_tests_dependencies_unchanged": true,
+  "original_exports_unchanged": true,
+  "github_markdown_render": {
+    "tables": 3,
+    "table_column_counts": [
+      3,
+      6,
+      2
+    ],
+    "headings": 10,
+    "code_blocks": 2,
+    "links": 18
+  },
   "browser_checks": [
     {
-      "name": "desktop-top",
+      "name": "candidates-desktop",
       "viewport": 1440,
-      "bodyWidth": 1425,
       "documentWidth": 1425,
       "images": [
         {
@@ -40,62 +63,73 @@
           "width": 2178
         }
       ],
-      "y": 0
-    },
-    {
-      "name": "desktop-peers",
-      "viewport": 1440,
-      "bodyWidth": 1425,
-      "documentWidth": 1425,
-      "images": [
-        {
-          "complete": true,
-          "width": 1938
-        },
-        {
-          "complete": true,
-          "width": 2178
-        },
-        {
-          "complete": true,
-          "width": 2178
-        },
-        {
-          "complete": true,
-          "width": 2178
-        }
+      "candidateRows": [
+        [
+          "LOMA LINDA UNIVERSITY MEDICAL CENTER",
+          "CA",
+          "413",
+          "185",
+          "+228",
+          "195"
+        ],
+        [
+          "HARRIS HEALTH",
+          "TX",
+          "367",
+          "152",
+          "+215",
+          "239"
+        ],
+        [
+          "UNIVERSITY HEALTH SYSTEM",
+          "TX",
+          "366",
+          "152",
+          "+214",
+          "239"
+        ],
+        [
+          "UNIVERSITY MEDICAL CENTER NEW ORLEANS",
+          "LA",
+          "327",
+          "140",
+          "+187",
+          "63"
+        ],
+        [
+          "RUSH UNIVERSITY MEDICAL CENTER",
+          "IL",
+          "370",
+          "192",
+          "+178",
+          "109"
+        ]
       ],
-      "y": 2936
-    },
-    {
-      "name": "desktop-bottom",
-      "viewport": 1440,
-      "bodyWidth": 1425,
-      "documentWidth": 1425,
-      "images": [
-        {
-          "complete": true,
-          "width": 1938
-        },
-        {
-          "complete": true,
-          "width": 2178
-        },
-        {
-          "complete": true,
-          "width": 2178
-        },
-        {
-          "complete": true,
-          "width": 2178
-        }
+      "caption": "OP_18b | Oct 2024-Sep 2025 | durations and differences in minutes",
+      "headings": [
+        "Healthcare Operations\n& Performance Analytics",
+        "ED length of visit",
+        "Left before being seen",
+        "Nurses always communicated well",
+        "Where should an operations team look more closely?",
+        "Hospital General Information",
+        "Timely and Effective Care",
+        "HCAHPS Patient Survey",
+        "How much of the data supports a comparison?",
+        "How hospital scores are distributed",
+        "How hospitals compare with their local peers",
+        "Southeast Health Medical Center",
+        "Five candidates for an ED operations review",
+        "What I found and what I would check next",
+        "Review ED flow locally",
+        "Review communication and evidence gaps",
+        "How I kept the comparisons consistent"
       ],
-      "y": 4266
+      "brokenAnchors": []
     },
     {
-      "name": "mobile",
+      "name": "candidates-mobile",
       "viewport": 430,
-      "bodyWidth": 430,
       "documentWidth": 430,
       "images": [
         {
@@ -115,9 +149,70 @@
           "width": 2178
         }
       ],
-      "y": 2319
+      "candidateRows": [
+        [
+          "LOMA LINDA UNIVERSITY MEDICAL CENTER",
+          "CA",
+          "413",
+          "185",
+          "+228",
+          "195"
+        ],
+        [
+          "HARRIS HEALTH",
+          "TX",
+          "367",
+          "152",
+          "+215",
+          "239"
+        ],
+        [
+          "UNIVERSITY HEALTH SYSTEM",
+          "TX",
+          "366",
+          "152",
+          "+214",
+          "239"
+        ],
+        [
+          "UNIVERSITY MEDICAL CENTER NEW ORLEANS",
+          "LA",
+          "327",
+          "140",
+          "+187",
+          "63"
+        ],
+        [
+          "RUSH UNIVERSITY MEDICAL CENTER",
+          "IL",
+          "370",
+          "192",
+          "+178",
+          "109"
+        ]
+      ],
+      "caption": "OP_18b | Oct 2024-Sep 2025 | durations and differences in minutes",
+      "headings": [
+        "Healthcare Operations\n& Performance Analytics",
+        "ED length of visit",
+        "Left before being seen",
+        "Nurses always communicated well",
+        "Where should an operations team look more closely?",
+        "Hospital General Information",
+        "Timely and Effective Care",
+        "HCAHPS Patient Survey",
+        "How much of the data supports a comparison?",
+        "How hospital scores are distributed",
+        "How hospitals compare with their local peers",
+        "Southeast Health Medical Center",
+        "Five candidates for an ED operations review",
+        "What I found and what I would check next",
+        "Review ED flow locally",
+        "Review communication and evidence gaps",
+        "How I kept the comparisons consistent"
+      ],
+      "brokenAnchors": []
     }
   ],
-  "visual_inspection": "Four matplotlib figures and desktop peer/findings sections plus 430px mobile coverage inspected; horizontal chart/table scrolling on narrow screens",
-  "original_exports_unchanged": true
+  "visual_inspection": "Updated shortlist inspected at desktop 1440px and mobile 430px; table scrolls inside its container. Existing four figures preserved byte-for-byte."
 }

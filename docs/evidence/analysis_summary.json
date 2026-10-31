@@ -186,5 +186,80 @@
         "end_date": "2025-09-30"
       }
     ]
+  },
+  "review_candidates": {
+    "measure_id": "OP_18b",
+    "unit": "minutes",
+    "start_date": "2024-10-01",
+    "end_date": "2025-09-30",
+    "flagged_pool_count": 659,
+    "selection_rule": "Five existing eligible OP_18b review flags with the largest positive stored gap to their own leave-one-out state peer median; at least ten other peers. Ties use facility ID ascending. No new benchmark or composite score is calculated.",
+    "hospitals": [
+      {
+        "facility_id": "050327",
+        "facility_name": "LOMA LINDA UNIVERSITY MEDICAL CENTER",
+        "state": "CA",
+        "measure_id": "OP_18b",
+        "score_value": "413.000000",
+        "peer_median": "185.0",
+        "gap_to_peer_median": "228.0",
+        "peer_count": "195",
+        "peer_q3": "216.5",
+        "start_date": "2024-10-01",
+        "end_date": "2025-09-30"
+      },
+      {
+        "facility_id": "450289",
+        "facility_name": "HARRIS HEALTH",
+        "state": "TX",
+        "measure_id": "OP_18b",
+        "score_value": "367.000000",
+        "peer_median": "152.0",
+        "gap_to_peer_median": "215.0",
+        "peer_count": "239",
+        "peer_q3": "178.0",
+        "start_date": "2024-10-01",
+        "end_date": "2025-09-30"
+      },
+      {
+        "facility_id": "450213",
+        "facility_name": "UNIVERSITY HEALTH SYSTEM",
+        "state": "TX",
+        "measure_id": "OP_18b",
+        "score_value": "366.000000",
+        "peer_median": "152.0",
+        "gap_to_peer_median": "214.0",
+        "peer_count": "239",
+        "peer_q3": "178.0",
+        "start_date": "2024-10-01",
+        "end_date": "2025-09-30"
+      },
+      {
+        "facility_id": "190005",
+        "facility_name": "UNIVERSITY MEDICAL CENTER NEW ORLEANS",
+        "state": "LA",
+        "measure_id": "OP_18b",
+        "score_value": "327.000000",
+        "peer_median": "140.0",
+        "gap_to_peer_median": "187.0",
+        "peer_count": "63",
+        "peer_q3": "165.5",
+        "start_date": "2024-10-01",
+        "end_date": "2025-09-30"
+      },
+      {
+        "facility_id": "140119",
+        "facility_name": "RUSH UNIVERSITY MEDICAL CENTER",
+        "state": "IL",
+        "measure_id": "OP_18b",
+        "score_value": "370.000000",
+        "peer_median": "192.0",
+        "gap_to_peer_median": "178.0",
+        "peer_count": "109",
+        "peer_q3": "222.0",
+        "start_date": "2024-10-01",
+        "end_date": "2025-09-30"
+      }
+    ]
   }
 }
