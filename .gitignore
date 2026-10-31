@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+spark-warehouse/
+artifacts/
+derby.log
+*.csv
+*.parquet
+*.pbix
+*.part
+

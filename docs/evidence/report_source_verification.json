@@ -1,0 +1,33 @@
+{
+  "mode": "verified_exports",
+  "run_id": "20261031T100805Z_d4fac535",
+  "quality_report_sha256": "d2bac8c5b85b90d5af41a9900892d3dab6c92244e726c728546f9059623fd782",
+  "success_sha256": "52294cde94e36eb635b24d7e9dc9f98e681e8eba4e89e11307bde974d1311194",
+  "verified_export_sha256": {
+    "dim_hospital.csv": "149ce33f69eb49e501121f3e6002379d35dfd5449833ab2b1cc94cd5c70db0fa",
+    "dim_measure.csv": "cc5603684adc16f99b5b5db2155926613afe1c8b917a9dddcecc61d49e8dda83",
+    "fact_hospital_measure.csv": "accfc63118862d69df1a6c0c586d84d163c7b47d5d10e1ecba98e9c92e57c365",
+    "hospital_metrics.csv": "65a7cee2756d0b7b827397ffd452d0df074921f30068ccea747136da631cf03c",
+    "peer_benchmarks.csv": "5eb6b78c9aa61057ea07a3d57a66485301287355c2e933ebeec95038bcb8efe5"
+  },
+  "approved_source_sha256": {
+    "xubh-q36u": "f874f09fef895a1ccf5bb7392dcbb2be05c9860339261b093fe00f0c1b013480",
+    "yv7e-xc69": "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516",
+    "dgck-syfz": "b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc"
+  },
+  "report_date": "2026-10-31",
+  "python_version": "3.11.16",
+  "matplotlib_version": "3.10.8",
+  "pipeline_reexecuted": false,
+  "inferential_tests_executed": false,
+  "builder_sha256": "c38b6a491d81889830bfb4fca50c67d784a96ef0b95fc3c8af5f75e7df538509",
+  "artifact_sha256": {
+    "index.html": "16aaf4fbb142eb2257a03b816d8c8531bb00dfa516ee61defc74690b65d9602a",
+    "executive_summary.md": "d1b177f96425e5aa426be67087426854338911ff7aed085cba062688ce234dd1",
+    "evidence/analysis_summary.json": "13f9c669a941627aa9ae6fade44535402e2ba4d01500f78be536147539dd3145",
+    "figures/coverage.png": "cda8b6f94282d609f17bacc81e620fd77ed8335ee645954893fd3b1ecef3f671",
+    "figures/distributions.png": "2332b7b252f8a23b14ec4c97b091978308afdc27172865f9ed8ad467e059eb6c",
+    "figures/peer_gaps.png": "5978d9212978a30aba0a832e6ba48a016832c02e76ab357e6f3a172318df3840",
+    "figures/hospital_example.png": "18bd6df4fba7b7e9db794c1a3fe0a81c7d1639feb7b7335d525c2b9c5c99c177"
+  }
+}

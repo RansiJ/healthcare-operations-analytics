@@ -1,0 +1,12 @@
+{
+  "command": "python -m unittest discover -s tests -p test_report.py -v",
+  "exit_code": 0,
+  "successful": true,
+  "tests_run": 8,
+  "seconds": 0.059,
+  "test_file_sha256": "471fef01cce3bf284511286e213cf9ecf6ab31c68081f4aab95f1f9fb94f48ab",
+  "builder_sha256": "c38b6a491d81889830bfb4fca50c67d784a96ef0b95fc3c8af5f75e7df538509",
+  "pipeline_reexecuted": false,
+  "original_spark_suite_reexecuted": false,
+  "test_output": "test_exact_inclusive_quartiles_and_zero (test_report.ReportTests.test_exact_inclusive_quartiles_and_zero) ... ok\ntest_full_chain_and_latest_selection (test_report.ReportTests.test_full_chain_and_latest_selection) ... ok\ntest_missing_export_returns_only_verified_summary (test_report.ReportTests.test_missing_export_returns_only_verified_summary) ... ok\ntest_missing_observations_do_not_create_a_distribution (test_report.ReportTests.test_missing_observations_do_not_create_a_distribution) ... ok\ntest_no_fourth_or_different_source (test_report.ReportTests.test_no_fourth_or_different_source) ... ok\ntest_summary_mode_has_no_invented_distributions_or_hospitals (test_report.ReportTests.test_summary_mode_has_no_invented_distributions_or_hospitals) ... ok\ntest_tampered_csv_stops_without_summary_fallback (test_report.ReportTests.test_tampered_csv_stops_without_summary_fallback) ... ok\ntest_tampered_quality_report_stops (test_report.ReportTests.test_tampered_quality_report_stops) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.059s\n\nOK\n"
+}

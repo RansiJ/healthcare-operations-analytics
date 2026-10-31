@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+# Preserve original evidence bytes and their recorded checksums.
+docs/evidence/*.json -text

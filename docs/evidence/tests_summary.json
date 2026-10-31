@@ -1,0 +1,15 @@
+{
+  "command": "python -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "successful": true,
+  "tests_run": 27,
+  "suite_seconds": 261.711,
+  "wall_seconds": 262.126,
+  "log_sha256": "dcc5469a6b7616a0628dcea83b964859ef5bb60a50c2735d0515b377317b106f",
+  "runtime": "Python 3.11.16 / Spark 4.0.1 / Java 17.0.21; Windows",
+  "test_code_sha256": {
+    "tests/test_sources.py": "d6c6e162cc259bfe655577d3219ba406ae806b450f30a6c06921d13c7ba6db89",
+    "tests/test_spark_contracts.py": "ea02c3b75b625ca7ae075b1dbac071129b166bc58d143cfebe3cd0f0321b8c88"
+  },
+  "initial_environment_issue": "Windows Python 3.12 + Spark 4.0.1 workers crashed; final suite uses isolated Python 3.11"
+}

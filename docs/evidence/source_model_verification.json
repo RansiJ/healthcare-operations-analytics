@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "run_id": "20261031T100551Z_e122eb7a",
+  "selected_source_rows_verified": 14106,
+  "method": "Independent standard-library CSV, Decimal, datetime and note-policy comparison against Spark fact export",
+  "checks": [
+    "original and normalized text facility IDs",
+    "raw score and sample retention",
+    "numeric scores and sample counts",
+    "independent footnote code arrays and eligibility",
+    "exact measurement dates"
+  ],
+  "additional_analytical_sources": 0
+}

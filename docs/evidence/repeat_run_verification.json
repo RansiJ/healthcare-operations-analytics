@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "run_ids": [
+    "20261031T100551Z_e122eb7a",
+    "20261031T100805Z_d4fac535"
+  ],
+  "both_success_markers_and_output_hashes_verified": true,
+  "identical_code_and_source_hashes": true,
+  "excluded_provenance_columns": [
+    "verified_at_utc",
+    "downloaded_at_utc"
+  ],
+  "comparison": "Exact ordered equality of every remaining CSV field in all five tables",
+  "tables": {
+    "dim_hospital": {
+      "rows": 5419,
+      "business_columns_equal": true,
+      "canonical_business_sha256": "012ea4b29c47b05c08f17f3c6b228332387d22f23e8f13b4c6fb19535c32e5ed"
+    },
+    "dim_measure": {
+      "rows": 3,
+      "business_columns_equal": true,
+      "canonical_business_sha256": "2ad61b6ecabc67a3149b0f3d10c1513af711acc885378bb73e864ebbe94c12b9"
+    },
+    "fact_hospital_measure": {
+      "rows": 14106,
+      "business_columns_equal": true,
+      "canonical_business_sha256": "819b756ead7e32a0ebb6d528c6b407eaf23a1877d95987b924d48e188b2ac1d0"
+    },
+    "hospital_metrics": {
+      "rows": 8301,
+      "business_columns_equal": true,
+      "canonical_business_sha256": "8065ee9d4870e83aa446f14eb05407c60aca5c356eaff9ef93fa734bda78a7e9"
+    },
+    "peer_benchmarks": {
+      "rows": 8301,
+      "business_columns_equal": true,
+      "canonical_business_sha256": "0071faeb40a7223e3e8fd4945843ca78ec691a1a4228dfe043bbc8803f4d2bbd"
+    }
+  }
+}

@@ -1,0 +1,1367 @@
+{
+  "phase": 2,
+  "status": "passed",
+  "run_id": "20261031T100551Z_e122eb7a",
+  "completed_at_utc": "2026-10-31T10:07:25.032666+00:00",
+  "python_version": "3.11.16",
+  "spark_version": "4.0.1",
+  "source_release": "2026-08-13",
+  "sources": [
+    {
+      "dataset_id": "xubh-q36u",
+      "filename": "Hospital_General_Information.csv",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/893c372430d9d71a1c52737d01239d47_1785189955/Hospital_General_Information.csv",
+      "sha256": "f874f09fef895a1ccf5bb7392dcbb2be05c9860339261b093fe00f0c1b013480",
+      "bytes": 1450767,
+      "source_release": "2026-08-13",
+      "source_modified": "2026-07-22",
+      "verified_at_utc": "2026-10-31T10:05:51.090969+00:00",
+      "downloaded_at_utc": null,
+      "download_date_note": "Downloaded by Phase 2 bootstrap on client work date 2026-10-31; exact original UTC download timestamp was not recorded"
+    },
+    {
+      "dataset_id": "yv7e-xc69",
+      "filename": "Timely_and_Effective_Care-Hospital.csv",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/0437b5494ac61507ad90f2af6b8085a7_1785189967/Timely_and_Effective_Care-Hospital.csv",
+      "sha256": "1e5a1ca803c2b09468fe3ae3fe60fef3e910f5f5300630a24791c88a1abff516",
+      "bytes": 34150899,
+      "source_release": "2026-08-13",
+      "source_modified": "2026-07-22",
+      "verified_at_utc": "2026-10-31T10:05:51.126518+00:00",
+      "downloaded_at_utc": null,
+      "download_date_note": "Downloaded by Phase 2 bootstrap on client work date 2026-10-31; exact original UTC download timestamp was not recorded"
+    },
+    {
+      "dataset_id": "dgck-syfz",
+      "filename": "HCAHPS-Hospital.csv",
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/78a50346fbe828ea0ce2837847af6a7c_1785189950/HCAHPS-Hospital.csv",
+      "sha256": "b70e598f29552df302e30ed649d178abd1b3d3c868ae97cf8e55453dd33898fc",
+      "bytes": 105461119,
+      "source_release": "2026-08-13",
+      "source_modified": "2026-07-22",
+      "verified_at_utc": "2026-10-31T10:05:51.223669+00:00",
+      "downloaded_at_utc": null,
+      "download_date_note": "Downloaded by Phase 2 bootstrap on client work date 2026-10-31; exact original UTC download timestamp was not recorded"
+    }
+  ],
+  "code_sha256": {
+    "healthcare_pipeline/__init__.py": "7d89d24537391ad39b4f6912c305e885d9d1c506f097b1a3d11ef36a471a8f1e",
+    "healthcare_pipeline/__main__.py": "e9280499c91d34e29da89abc2b73ffd9d2d1dbc0ff8041e7af878e13a57b3d68",
+    "healthcare_pipeline/pipeline.py": "e366b12e8aa2d84fc059436fe0547830ffe1593c8a48c3a26cff1718846ff75a",
+    "healthcare_pipeline/reference.py": "17ed85012f79e5c898b96e7dfbc1506e15f93e405dc5f3a4857762cc6d283f46",
+    "healthcare_pipeline/sources.py": "9b6e7587d9c2a744f09680b14bb319c86cdaa1041eafe3b7e34cf919ed0588f2",
+    "healthcare_pipeline/transform.py": "6cb78f8c19a2a2f2aea948267ecfec03b09fca4f9926c6cb9558b0ea4d15b6e9",
+    "sql/hospital_metrics.sql": "ee89bc22e6f5487f32103e50228ebbb5c3a109cdf6a6528a10492c3c095c026d",
+    "sql/peer_benchmarks.sql": "0b6d20e9a731fbb3471a1ed1929b1802eb012047ec89f3be740cfac350736997"
+  },
+  "output_sha256": {
+    "dim_hospital.csv": "5c41755ce744d26db51e0bc566f8a39e7e82a67621de15b08149eb2394ef596f",
+    "dim_measure.csv": "cc5603684adc16f99b5b5db2155926613afe1c8b917a9dddcecc61d49e8dda83",
+    "fact_hospital_measure.csv": "3769aaf464ef1164dbaeb3a6a2cdd7772944851cfee01dcc938f01ee6c439c45",
+    "hospital_metrics.csv": "a04f4b09d98d562a5e016af8433a985d9bdd5670e1b22145908126c81792bcc8",
+    "peer_benchmarks.csv": "306433823e23ce90a949226c78b9f47f3e88ceb228f206f0c8d102dfc0d7da36"
+  },
+  "rows": {
+    "dim_hospital": 5419,
+    "dim_measure": 3,
+    "fact_hospital_measure": 14106,
+    "hospital_metrics": 8301,
+    "peer_benchmarks": 8301
+  },
+  "cohort_hospitals": 2767,
+  "coverage": [
+    {
+      "measure_id": "OP_18b",
+      "cohort_hospitals": 2767,
+      "reported_rows": 2767,
+      "numeric_scores": 2662,
+      "eligible": 2632,
+      "eligible_coverage_pct": 95.12,
+      "comparable": 2567,
+      "unfavorable_signals": 659,
+      "excluded_numeric": 30,
+      "exclusion_reasons": {
+        "score_footnote": 135,
+        "score_not_available": 105
+      }
+    },
+    {
+      "measure_id": "OP_22",
+      "cohort_hospitals": 2767,
+      "reported_rows": 2767,
+      "numeric_scores": 2588,
+      "eligible": 2588,
+      "eligible_coverage_pct": 93.53,
+      "comparable": 2522,
+      "unfavorable_signals": 493,
+      "excluded_numeric": 0,
+      "exclusion_reasons": {
+        "score_not_available": 179,
+        "score_footnote": 179
+      }
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "cohort_hospitals": 2767,
+      "reported_rows": 2767,
+      "numeric_scores": 2677,
+      "eligible": 2496,
+      "eligible_coverage_pct": 90.21,
+      "comparable": 2430,
+      "unfavorable_signals": 541,
+      "excluded_numeric": 181,
+      "exclusion_reasons": {
+        "score_footnote": 271,
+        "surveys_below_100_or_missing": 260,
+        "survey_count_footnote": 271,
+        "response_rate_footnote": 271,
+        "score_not_available": 90
+      }
+    }
+  ],
+  "state_coverage": [
+    {
+      "measure_id": "OP_18b",
+      "state": "AK",
+      "cohort_hospitals": 8,
+      "reported_rows": 8,
+      "eligible": 7,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "AL",
+      "cohort_hospitals": 73,
+      "reported_rows": 73,
+      "eligible": 71,
+      "comparable": 71
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "AR",
+      "cohort_hospitals": 42,
+      "reported_rows": 42,
+      "eligible": 40,
+      "comparable": 40
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "AZ",
+      "cohort_hospitals": 55,
+      "reported_rows": 55,
+      "eligible": 46,
+      "comparable": 46
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "CA",
+      "cohort_hospitals": 224,
+      "reported_rows": 224,
+      "eligible": 196,
+      "comparable": 196
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "CO",
+      "cohort_hospitals": 49,
+      "reported_rows": 49,
+      "eligible": 47,
+      "comparable": 47
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "CT",
+      "cohort_hospitals": 25,
+      "reported_rows": 25,
+      "eligible": 25,
+      "comparable": 25
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "DC",
+      "cohort_hospitals": 5,
+      "reported_rows": 5,
+      "eligible": 4,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "DE",
+      "cohort_hospitals": 6,
+      "reported_rows": 6,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "FL",
+      "cohort_hospitals": 159,
+      "reported_rows": 159,
+      "eligible": 155,
+      "comparable": 155
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "GA",
+      "cohort_hospitals": 65,
+      "reported_rows": 65,
+      "eligible": 64,
+      "comparable": 64
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "HI",
+      "cohort_hospitals": 10,
+      "reported_rows": 10,
+      "eligible": 9,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "IA",
+      "cohort_hospitals": 30,
+      "reported_rows": 30,
+      "eligible": 30,
+      "comparable": 30
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "ID",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 13,
+      "comparable": 13
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "IL",
+      "cohort_hospitals": 111,
+      "reported_rows": 111,
+      "eligible": 110,
+      "comparable": 110
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "IN",
+      "cohort_hospitals": 75,
+      "reported_rows": 75,
+      "eligible": 73,
+      "comparable": 73
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "KS",
+      "cohort_hospitals": 33,
+      "reported_rows": 33,
+      "eligible": 33,
+      "comparable": 33
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "KY",
+      "cohort_hospitals": 59,
+      "reported_rows": 59,
+      "eligible": 59,
+      "comparable": 59
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "LA",
+      "cohort_hospitals": 65,
+      "reported_rows": 65,
+      "eligible": 64,
+      "comparable": 64
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "MA",
+      "cohort_hospitals": 53,
+      "reported_rows": 53,
+      "eligible": 50,
+      "comparable": 50
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "MD",
+      "cohort_hospitals": 38,
+      "reported_rows": 38,
+      "eligible": 36,
+      "comparable": 36
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "ME",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 12,
+      "comparable": 12
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "MI",
+      "cohort_hospitals": 79,
+      "reported_rows": 79,
+      "eligible": 78,
+      "comparable": 78
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "MN",
+      "cohort_hospitals": 39,
+      "reported_rows": 39,
+      "eligible": 39,
+      "comparable": 39
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "MO",
+      "cohort_hospitals": 62,
+      "reported_rows": 62,
+      "eligible": 62,
+      "comparable": 62
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "MS",
+      "cohort_hospitals": 50,
+      "reported_rows": 50,
+      "eligible": 48,
+      "comparable": 48
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "MT",
+      "cohort_hospitals": 11,
+      "reported_rows": 11,
+      "eligible": 10,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "NC",
+      "cohort_hospitals": 77,
+      "reported_rows": 77,
+      "eligible": 76,
+      "comparable": 76
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "ND",
+      "cohort_hospitals": 7,
+      "reported_rows": 7,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "NE",
+      "cohort_hospitals": 21,
+      "reported_rows": 21,
+      "eligible": 21,
+      "comparable": 21
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "NH",
+      "cohort_hospitals": 12,
+      "reported_rows": 12,
+      "eligible": 12,
+      "comparable": 12
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "NJ",
+      "cohort_hospitals": 55,
+      "reported_rows": 55,
+      "eligible": 55,
+      "comparable": 55
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "NM",
+      "cohort_hospitals": 24,
+      "reported_rows": 24,
+      "eligible": 21,
+      "comparable": 21
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "NV",
+      "cohort_hospitals": 21,
+      "reported_rows": 21,
+      "eligible": 20,
+      "comparable": 20
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "NY",
+      "cohort_hospitals": 122,
+      "reported_rows": 122,
+      "eligible": 122,
+      "comparable": 122
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "OH",
+      "cohort_hospitals": 97,
+      "reported_rows": 97,
+      "eligible": 94,
+      "comparable": 94
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "OK",
+      "cohort_hospitals": 73,
+      "reported_rows": 73,
+      "eligible": 57,
+      "comparable": 57
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "OR",
+      "cohort_hospitals": 31,
+      "reported_rows": 31,
+      "eligible": 29,
+      "comparable": 29
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "PA",
+      "cohort_hospitals": 119,
+      "reported_rows": 119,
+      "eligible": 115,
+      "comparable": 115
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "RI",
+      "cohort_hospitals": 10,
+      "reported_rows": 10,
+      "eligible": 10,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "SC",
+      "cohort_hospitals": 48,
+      "reported_rows": 48,
+      "eligible": 48,
+      "comparable": 48
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "SD",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 11,
+      "comparable": 11
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "TN",
+      "cohort_hospitals": 75,
+      "reported_rows": 75,
+      "eligible": 72,
+      "comparable": 72
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "TX",
+      "cohort_hospitals": 271,
+      "reported_rows": 271,
+      "eligible": 240,
+      "comparable": 240
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "UT",
+      "cohort_hospitals": 32,
+      "reported_rows": 32,
+      "eligible": 32,
+      "comparable": 32
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "VA",
+      "cohort_hospitals": 68,
+      "reported_rows": 68,
+      "eligible": 67,
+      "comparable": 67
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "VT",
+      "cohort_hospitals": 6,
+      "reported_rows": 6,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "WA",
+      "cohort_hospitals": 41,
+      "reported_rows": 41,
+      "eligible": 40,
+      "comparable": 40
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "WI",
+      "cohort_hospitals": 61,
+      "reported_rows": 61,
+      "eligible": 61,
+      "comparable": 61
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "WV",
+      "cohort_hospitals": 23,
+      "reported_rows": 23,
+      "eligible": 23,
+      "comparable": 23
+    },
+    {
+      "measure_id": "OP_18b",
+      "state": "WY",
+      "cohort_hospitals": 8,
+      "reported_rows": 8,
+      "eligible": 7,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "AK",
+      "cohort_hospitals": 8,
+      "reported_rows": 8,
+      "eligible": 7,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "AL",
+      "cohort_hospitals": 73,
+      "reported_rows": 73,
+      "eligible": 68,
+      "comparable": 68
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "AR",
+      "cohort_hospitals": 42,
+      "reported_rows": 42,
+      "eligible": 40,
+      "comparable": 40
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "AZ",
+      "cohort_hospitals": 55,
+      "reported_rows": 55,
+      "eligible": 49,
+      "comparable": 49
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "CA",
+      "cohort_hospitals": 224,
+      "reported_rows": 224,
+      "eligible": 198,
+      "comparable": 198
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "CO",
+      "cohort_hospitals": 49,
+      "reported_rows": 49,
+      "eligible": 47,
+      "comparable": 47
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "CT",
+      "cohort_hospitals": 25,
+      "reported_rows": 25,
+      "eligible": 25,
+      "comparable": 25
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "DC",
+      "cohort_hospitals": 5,
+      "reported_rows": 5,
+      "eligible": 5,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "DE",
+      "cohort_hospitals": 6,
+      "reported_rows": 6,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "FL",
+      "cohort_hospitals": 159,
+      "reported_rows": 159,
+      "eligible": 148,
+      "comparable": 148
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "GA",
+      "cohort_hospitals": 65,
+      "reported_rows": 65,
+      "eligible": 63,
+      "comparable": 63
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "HI",
+      "cohort_hospitals": 10,
+      "reported_rows": 10,
+      "eligible": 9,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "IA",
+      "cohort_hospitals": 30,
+      "reported_rows": 30,
+      "eligible": 30,
+      "comparable": 30
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "ID",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 13,
+      "comparable": 13
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "IL",
+      "cohort_hospitals": 111,
+      "reported_rows": 111,
+      "eligible": 101,
+      "comparable": 101
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "IN",
+      "cohort_hospitals": 75,
+      "reported_rows": 75,
+      "eligible": 66,
+      "comparable": 66
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "KS",
+      "cohort_hospitals": 33,
+      "reported_rows": 33,
+      "eligible": 29,
+      "comparable": 29
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "KY",
+      "cohort_hospitals": 59,
+      "reported_rows": 59,
+      "eligible": 59,
+      "comparable": 59
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "LA",
+      "cohort_hospitals": 65,
+      "reported_rows": 65,
+      "eligible": 63,
+      "comparable": 63
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "MA",
+      "cohort_hospitals": 53,
+      "reported_rows": 53,
+      "eligible": 50,
+      "comparable": 50
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "MD",
+      "cohort_hospitals": 38,
+      "reported_rows": 38,
+      "eligible": 31,
+      "comparable": 31
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "ME",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 13,
+      "comparable": 13
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "MI",
+      "cohort_hospitals": 79,
+      "reported_rows": 79,
+      "eligible": 69,
+      "comparable": 69
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "MN",
+      "cohort_hospitals": 39,
+      "reported_rows": 39,
+      "eligible": 39,
+      "comparable": 39
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "MO",
+      "cohort_hospitals": 62,
+      "reported_rows": 62,
+      "eligible": 62,
+      "comparable": 62
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "MS",
+      "cohort_hospitals": 50,
+      "reported_rows": 50,
+      "eligible": 49,
+      "comparable": 49
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "MT",
+      "cohort_hospitals": 11,
+      "reported_rows": 11,
+      "eligible": 10,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "NC",
+      "cohort_hospitals": 77,
+      "reported_rows": 77,
+      "eligible": 76,
+      "comparable": 76
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "ND",
+      "cohort_hospitals": 7,
+      "reported_rows": 7,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "NE",
+      "cohort_hospitals": 21,
+      "reported_rows": 21,
+      "eligible": 21,
+      "comparable": 21
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "NH",
+      "cohort_hospitals": 12,
+      "reported_rows": 12,
+      "eligible": 12,
+      "comparable": 12
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "NJ",
+      "cohort_hospitals": 55,
+      "reported_rows": 55,
+      "eligible": 55,
+      "comparable": 55
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "NM",
+      "cohort_hospitals": 24,
+      "reported_rows": 24,
+      "eligible": 21,
+      "comparable": 21
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "NV",
+      "cohort_hospitals": 21,
+      "reported_rows": 21,
+      "eligible": 20,
+      "comparable": 20
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "NY",
+      "cohort_hospitals": 122,
+      "reported_rows": 122,
+      "eligible": 119,
+      "comparable": 119
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "OH",
+      "cohort_hospitals": 97,
+      "reported_rows": 97,
+      "eligible": 96,
+      "comparable": 96
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "OK",
+      "cohort_hospitals": 73,
+      "reported_rows": 73,
+      "eligible": 57,
+      "comparable": 57
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "OR",
+      "cohort_hospitals": 31,
+      "reported_rows": 31,
+      "eligible": 29,
+      "comparable": 29
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "PA",
+      "cohort_hospitals": 119,
+      "reported_rows": 119,
+      "eligible": 118,
+      "comparable": 118
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "RI",
+      "cohort_hospitals": 10,
+      "reported_rows": 10,
+      "eligible": 10,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "SC",
+      "cohort_hospitals": 48,
+      "reported_rows": 48,
+      "eligible": 48,
+      "comparable": 48
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "SD",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 11,
+      "comparable": 11
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "TN",
+      "cohort_hospitals": 75,
+      "reported_rows": 75,
+      "eligible": 68,
+      "comparable": 68
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "TX",
+      "cohort_hospitals": 271,
+      "reported_rows": 271,
+      "eligible": 244,
+      "comparable": 244
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "UT",
+      "cohort_hospitals": 32,
+      "reported_rows": 32,
+      "eligible": 32,
+      "comparable": 32
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "VA",
+      "cohort_hospitals": 68,
+      "reported_rows": 68,
+      "eligible": 67,
+      "comparable": 67
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "VT",
+      "cohort_hospitals": 6,
+      "reported_rows": 6,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "WA",
+      "cohort_hospitals": 41,
+      "reported_rows": 41,
+      "eligible": 40,
+      "comparable": 40
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "WI",
+      "cohort_hospitals": 61,
+      "reported_rows": 61,
+      "eligible": 55,
+      "comparable": 55
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "WV",
+      "cohort_hospitals": 23,
+      "reported_rows": 23,
+      "eligible": 21,
+      "comparable": 21
+    },
+    {
+      "measure_id": "OP_22",
+      "state": "WY",
+      "cohort_hospitals": 8,
+      "reported_rows": 8,
+      "eligible": 7,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "AK",
+      "cohort_hospitals": 8,
+      "reported_rows": 8,
+      "eligible": 8,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "AL",
+      "cohort_hospitals": 73,
+      "reported_rows": 73,
+      "eligible": 51,
+      "comparable": 51
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "AR",
+      "cohort_hospitals": 42,
+      "reported_rows": 42,
+      "eligible": 33,
+      "comparable": 33
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "AZ",
+      "cohort_hospitals": 55,
+      "reported_rows": 55,
+      "eligible": 47,
+      "comparable": 47
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "CA",
+      "cohort_hospitals": 224,
+      "reported_rows": 224,
+      "eligible": 213,
+      "comparable": 213
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "CO",
+      "cohort_hospitals": 49,
+      "reported_rows": 49,
+      "eligible": 47,
+      "comparable": 47
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "CT",
+      "cohort_hospitals": 25,
+      "reported_rows": 25,
+      "eligible": 25,
+      "comparable": 25
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "DC",
+      "cohort_hospitals": 5,
+      "reported_rows": 5,
+      "eligible": 4,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "DE",
+      "cohort_hospitals": 6,
+      "reported_rows": 6,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "FL",
+      "cohort_hospitals": 159,
+      "reported_rows": 159,
+      "eligible": 150,
+      "comparable": 150
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "GA",
+      "cohort_hospitals": 65,
+      "reported_rows": 65,
+      "eligible": 58,
+      "comparable": 58
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "HI",
+      "cohort_hospitals": 10,
+      "reported_rows": 10,
+      "eligible": 10,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "IA",
+      "cohort_hospitals": 30,
+      "reported_rows": 30,
+      "eligible": 28,
+      "comparable": 28
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "ID",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 13,
+      "comparable": 13
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "IL",
+      "cohort_hospitals": 111,
+      "reported_rows": 111,
+      "eligible": 95,
+      "comparable": 95
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "IN",
+      "cohort_hospitals": 75,
+      "reported_rows": 75,
+      "eligible": 72,
+      "comparable": 72
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "KS",
+      "cohort_hospitals": 33,
+      "reported_rows": 33,
+      "eligible": 31,
+      "comparable": 31
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "KY",
+      "cohort_hospitals": 59,
+      "reported_rows": 59,
+      "eligible": 54,
+      "comparable": 54
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "LA",
+      "cohort_hospitals": 65,
+      "reported_rows": 65,
+      "eligible": 47,
+      "comparable": 47
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "MA",
+      "cohort_hospitals": 53,
+      "reported_rows": 53,
+      "eligible": 49,
+      "comparable": 49
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "MD",
+      "cohort_hospitals": 38,
+      "reported_rows": 38,
+      "eligible": 37,
+      "comparable": 37
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "ME",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 13,
+      "comparable": 13
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "MI",
+      "cohort_hospitals": 79,
+      "reported_rows": 79,
+      "eligible": 76,
+      "comparable": 76
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "MN",
+      "cohort_hospitals": 39,
+      "reported_rows": 39,
+      "eligible": 39,
+      "comparable": 39
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "MO",
+      "cohort_hospitals": 62,
+      "reported_rows": 62,
+      "eligible": 59,
+      "comparable": 59
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "MS",
+      "cohort_hospitals": 50,
+      "reported_rows": 50,
+      "eligible": 35,
+      "comparable": 35
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "MT",
+      "cohort_hospitals": 11,
+      "reported_rows": 11,
+      "eligible": 9,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "NC",
+      "cohort_hospitals": 77,
+      "reported_rows": 77,
+      "eligible": 74,
+      "comparable": 74
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "ND",
+      "cohort_hospitals": 7,
+      "reported_rows": 7,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "NE",
+      "cohort_hospitals": 21,
+      "reported_rows": 21,
+      "eligible": 20,
+      "comparable": 20
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "NH",
+      "cohort_hospitals": 12,
+      "reported_rows": 12,
+      "eligible": 12,
+      "comparable": 12
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "NJ",
+      "cohort_hospitals": 55,
+      "reported_rows": 55,
+      "eligible": 53,
+      "comparable": 53
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "NM",
+      "cohort_hospitals": 24,
+      "reported_rows": 24,
+      "eligible": 21,
+      "comparable": 21
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "NV",
+      "cohort_hospitals": 21,
+      "reported_rows": 21,
+      "eligible": 18,
+      "comparable": 18
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "NY",
+      "cohort_hospitals": 122,
+      "reported_rows": 122,
+      "eligible": 120,
+      "comparable": 120
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "OH",
+      "cohort_hospitals": 97,
+      "reported_rows": 97,
+      "eligible": 91,
+      "comparable": 91
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "OK",
+      "cohort_hospitals": 73,
+      "reported_rows": 73,
+      "eligible": 52,
+      "comparable": 52
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "OR",
+      "cohort_hospitals": 31,
+      "reported_rows": 31,
+      "eligible": 31,
+      "comparable": 31
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "PA",
+      "cohort_hospitals": 119,
+      "reported_rows": 119,
+      "eligible": 114,
+      "comparable": 114
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "RI",
+      "cohort_hospitals": 10,
+      "reported_rows": 10,
+      "eligible": 10,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "SC",
+      "cohort_hospitals": 48,
+      "reported_rows": 48,
+      "eligible": 45,
+      "comparable": 45
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "SD",
+      "cohort_hospitals": 13,
+      "reported_rows": 13,
+      "eligible": 11,
+      "comparable": 11
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "TN",
+      "cohort_hospitals": 75,
+      "reported_rows": 75,
+      "eligible": 70,
+      "comparable": 70
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "TX",
+      "cohort_hospitals": 271,
+      "reported_rows": 271,
+      "eligible": 210,
+      "comparable": 210
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "UT",
+      "cohort_hospitals": 32,
+      "reported_rows": 32,
+      "eligible": 29,
+      "comparable": 29
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "VA",
+      "cohort_hospitals": 68,
+      "reported_rows": 68,
+      "eligible": 65,
+      "comparable": 65
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "VT",
+      "cohort_hospitals": 6,
+      "reported_rows": 6,
+      "eligible": 6,
+      "comparable": 0
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "WA",
+      "cohort_hospitals": 41,
+      "reported_rows": 41,
+      "eligible": 40,
+      "comparable": 40
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "WI",
+      "cohort_hospitals": 61,
+      "reported_rows": 61,
+      "eligible": 60,
+      "comparable": 60
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "WV",
+      "cohort_hospitals": 23,
+      "reported_rows": 23,
+      "eligible": 22,
+      "comparable": 22
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "state": "WY",
+      "cohort_hospitals": 8,
+      "reported_rows": 8,
+      "eligible": 7,
+      "comparable": 0
+    }
+  ],
+  "independent_peer_verification": {
+    "rows_verified": 8301,
+    "comparable_rows_verified": 7519,
+    "percentile_values_verified": 22557,
+    "tolerance": 1e-09,
+    "algorithm": "independent rational type-7 interpolation; identity-based self-exclusion"
+  },
+  "source_name_mismatches": 0,
+  "selected_measures_only": true,
+  "join_cardinality_and_export_roundtrip": "passed",
+  "malformed_types_dates_ranges_unknown_notes_duplicate_keys_orphans": "none",
+  "unselected_timely_rows_not_modeled": 128768,
+  "unselected_hcahps_rows_not_modeled": 320930,
+  "selected_facts_outside_cohort": 5805,
+  "limitations": [
+    "Executed locally; not executed in a Databricks account",
+    "Three different patient/measure definitions; OP_22 has a different period",
+    "Signals are descriptive review flags, not clinical or causal findings"
+  ]
+}

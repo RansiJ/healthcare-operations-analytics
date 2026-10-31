@@ -1,0 +1,4 @@
+# Local execution only. Databricks supplies its own PySpark/JVM; do not install these there.
+pyspark==4.0.1
+py4j==0.10.9.9
+

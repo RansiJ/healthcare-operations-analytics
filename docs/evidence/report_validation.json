@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "source_run": "20261031T100805Z_d4fac535",
+  "pipeline_reexecuted": false,
+  "original_spark_suite_reexecuted": false,
+  "independent_descriptive_quartile_checks": 9,
+  "report_rebuild_artifact_sha256_equal": true,
+  "reproducible_artifacts": [
+    "index.html",
+    "executive_summary.md",
+    "evidence/analysis_summary.json",
+    "figures/coverage.png",
+    "figures/distributions.png",
+    "figures/peer_gaps.png",
+    "figures/hospital_example.png"
+  ],
+  "summary_only_build_executed": true,
+  "summary_only_no_invented_distributions_or_hospital_values": true,
+  "browser_checks": [
+    {
+      "name": "desktop-top",
+      "viewport": 1440,
+      "bodyWidth": 1425,
+      "documentWidth": 1425,
+      "images": [
+        {
+          "complete": true,
+          "width": 1938
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        }
+      ],
+      "y": 0
+    },
+    {
+      "name": "desktop-peers",
+      "viewport": 1440,
+      "bodyWidth": 1425,
+      "documentWidth": 1425,
+      "images": [
+        {
+          "complete": true,
+          "width": 1938
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        }
+      ],
+      "y": 2936
+    },
+    {
+      "name": "desktop-bottom",
+      "viewport": 1440,
+      "bodyWidth": 1425,
+      "documentWidth": 1425,
+      "images": [
+        {
+          "complete": true,
+          "width": 1938
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        }
+      ],
+      "y": 4266
+    },
+    {
+      "name": "mobile",
+      "viewport": 430,
+      "bodyWidth": 430,
+      "documentWidth": 430,
+      "images": [
+        {
+          "complete": true,
+          "width": 1938
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        },
+        {
+          "complete": true,
+          "width": 2178
+        }
+      ],
+      "y": 2319
+    }
+  ],
+  "visual_inspection": "Four matplotlib figures and desktop peer/findings sections plus 430px mobile coverage inspected; horizontal chart/table scrolling on narrow screens",
+  "original_exports_unchanged": true
+}

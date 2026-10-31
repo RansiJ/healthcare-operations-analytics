@@ -1,0 +1,190 @@
+{
+  "run_id": "20261031T100805Z_d4fac535",
+  "cohort_hospitals": 2767,
+  "source_release": "2026-08-13",
+  "mode": "verified_exports",
+  "metrics": [
+    {
+      "measure_id": "OP_18b",
+      "cohort_hospitals": 2767,
+      "reported_rows": 2767,
+      "numeric_scores": 2662,
+      "eligible": 2632,
+      "eligible_coverage_pct": 95.12,
+      "comparable": 2567,
+      "unfavorable_signals": 659,
+      "excluded_numeric": 30,
+      "exclusion_reasons": {
+        "score_footnote": 135,
+        "score_not_available": 105
+      },
+      "label": "ED length of visit",
+      "comparable_pct": 92.77195518612216,
+      "signal_pct_of_comparable": 25.67199065056486,
+      "eligible_insufficient_peers": 65,
+      "ineligible": 135,
+      "missing_score": 105,
+      "period": "Oct 2024-Sep 2025",
+      "unit": "minutes",
+      "direction": "lower",
+      "distribution": {
+        "n": 2632,
+        "q1": 140.0,
+        "median": 170.0,
+        "q3": 204.0,
+        "min": 57.0,
+        "max": 413.0,
+        "zero_count": 0
+      },
+      "gap_distribution": {
+        "n": 2567,
+        "q1": -26.0,
+        "median": 0.0,
+        "q3": 27.0,
+        "min": -127.5,
+        "max": 228.0,
+        "zero_count": 5
+      }
+    },
+    {
+      "measure_id": "OP_22",
+      "cohort_hospitals": 2767,
+      "reported_rows": 2767,
+      "numeric_scores": 2588,
+      "eligible": 2588,
+      "eligible_coverage_pct": 93.53,
+      "comparable": 2522,
+      "unfavorable_signals": 493,
+      "excluded_numeric": 0,
+      "exclusion_reasons": {
+        "score_not_available": 179,
+        "score_footnote": 179
+      },
+      "label": "Left before being seen",
+      "comparable_pct": 91.14564510299964,
+      "signal_pct_of_comparable": 19.547977795400477,
+      "eligible_insufficient_peers": 66,
+      "ineligible": 179,
+      "missing_score": 179,
+      "period": "Jan-Dec 2024",
+      "unit": "percent",
+      "direction": "lower",
+      "distribution": {
+        "n": 2588,
+        "q1": 1.0,
+        "median": 2.0,
+        "q3": 3.0,
+        "min": 0.0,
+        "max": 23.0,
+        "zero_count": 338
+      },
+      "gap_distribution": {
+        "n": 2522,
+        "q1": -1.0,
+        "median": 0.0,
+        "q3": 1.0,
+        "min": -3.0,
+        "max": 20.0,
+        "zero_count": 808
+      }
+    },
+    {
+      "measure_id": "H_COMP_1_A_P",
+      "cohort_hospitals": 2767,
+      "reported_rows": 2767,
+      "numeric_scores": 2677,
+      "eligible": 2496,
+      "eligible_coverage_pct": 90.21,
+      "comparable": 2430,
+      "unfavorable_signals": 541,
+      "excluded_numeric": 181,
+      "exclusion_reasons": {
+        "score_footnote": 271,
+        "surveys_below_100_or_missing": 260,
+        "survey_count_footnote": 271,
+        "response_rate_footnote": 271,
+        "score_not_available": 90
+      },
+      "label": "Nurses always communicated well",
+      "comparable_pct": 87.82074448861583,
+      "signal_pct_of_comparable": 22.263374485596707,
+      "eligible_insufficient_peers": 66,
+      "ineligible": 271,
+      "missing_score": 90,
+      "period": "Oct 2024-Sep 2025",
+      "unit": "percent",
+      "direction": "higher",
+      "distribution": {
+        "n": 2496,
+        "q1": 75.0,
+        "median": 78.0,
+        "q3": 81.0,
+        "min": 52.0,
+        "max": 98.0,
+        "zero_count": 0
+      },
+      "gap_distribution": {
+        "n": 2430,
+        "q1": -3.0,
+        "median": 0.0,
+        "q3": 3.0,
+        "min": -23.0,
+        "max": 19.0,
+        "zero_count": 209
+      }
+    }
+  ],
+  "example": {
+    "selection_rule": "Lowest facility ID comparable on all three measures; independent of scores or flags",
+    "facility_id": "010001",
+    "facility_name": "SOUTHEAST HEALTH MEDICAL CENTER",
+    "state": "AL",
+    "measures": [
+      {
+        "facility_id": "010001",
+        "facility_name": "SOUTHEAST HEALTH MEDICAL CENTER",
+        "state": "AL",
+        "measure_id": "OP_18b",
+        "score_value": "212.000000",
+        "peer_count": "70",
+        "peer_q1": "124.5",
+        "peer_median": "153.0",
+        "peer_q3": "179.5",
+        "gap_to_peer_median": "59.0",
+        "unfavorable_signal": "true",
+        "start_date": "2024-10-01",
+        "end_date": "2025-09-30"
+      },
+      {
+        "facility_id": "010001",
+        "facility_name": "SOUTHEAST HEALTH MEDICAL CENTER",
+        "state": "AL",
+        "measure_id": "OP_22",
+        "score_value": "3.000000",
+        "peer_count": "67",
+        "peer_q1": "1.0",
+        "peer_median": "2.0",
+        "peer_q3": "3.0",
+        "gap_to_peer_median": "1.0",
+        "unfavorable_signal": "false",
+        "start_date": "2024-01-01",
+        "end_date": "2024-12-31"
+      },
+      {
+        "facility_id": "010001",
+        "facility_name": "SOUTHEAST HEALTH MEDICAL CENTER",
+        "state": "AL",
+        "measure_id": "H_COMP_1_A_P",
+        "score_value": "76.000000",
+        "peer_count": "50",
+        "peer_q1": "75.25",
+        "peer_median": "78.0",
+        "peer_q3": "81.0",
+        "gap_to_peer_median": "-2.0",
+        "unfavorable_signal": "false",
+        "start_date": "2024-10-01",
+        "end_date": "2025-09-30"
+      }
+    ]
+  }
+}
